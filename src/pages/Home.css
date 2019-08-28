@@ -1,0 +1,11 @@
+section#main-section {
+  background: #eee;
+  margin: 0 auto;
+  max-width: 780px;
+  width: 100%;
+}
+
+section#main-section .home-content {
+  margin: 0 auto;
+  height: 200px;
+}

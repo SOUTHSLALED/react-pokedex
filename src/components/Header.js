@@ -13,12 +13,14 @@ export default function Header() {
       <div className="header-content">
       <img src={pokedex} alt="pokedex"></img>
       <ul>
-       <Link to ='/'> 
-        <li>Home</li>
+       <Link to ='/' style={{textDecoration: 'none'}}> 
+        <li className="active">Home</li>
        </Link>
-        <li>Search</li>
-       <Link to ='/about'> 
-        <li>About</li>
+       <Link to ='/search' style={{textDecoration: 'none'}}>
+        <li className="active">Search</li>
+       </Link>
+       <Link to ='/about' style={{textDecoration: 'none'}} > 
+        <li className="active">About</li>
        </Link>
       </ul>
       </div>

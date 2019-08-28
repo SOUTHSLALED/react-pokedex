@@ -1,6 +1,6 @@
 header#main-header {
   background: red;
-  height: 140px;
+  height: 120px;
   border-bottom: 1px solid #dddddd;
 }
 
@@ -26,4 +26,9 @@ header#main-header .header-content ul li {
   display: inline;
   margin: 0;
   padding: 20px;
+  color: #fff;
+}
+
+header#main-header .header-content ul li:hover {
+  color: #f7b268;
 }
