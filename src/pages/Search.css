@@ -16,3 +16,22 @@ form#search button {
   font-weight: bold;
   cursor: pointer;
 }
+
+ul {
+  list-style: none;
+  margin-top: 30px;
+}
+
+ul li {
+  padding: 15px 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+ul li a {
+  color: #ff3000;
+  text-decoration: none;
+}

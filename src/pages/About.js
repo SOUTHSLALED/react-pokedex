@@ -11,7 +11,7 @@ export default class About extends Component {
       <p>Treinando meu react fazendo um pokedex
         <br />A ideia aqui é utilizar a API da nintendo
         e mostrar pokemons e suas caracteristicas
-        Por enquanto ainda está em construção!
+       <br /> Por enquanto ainda está em construção!
       </p>
      </div>
 
