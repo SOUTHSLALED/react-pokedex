@@ -3,6 +3,7 @@ import React from 'react';
 import Home from './pages/Home'
 import About from './pages/About'
 import Search from './pages/Search'
+import Details from './pages/Details'
 
 function Routes(){
     return(
@@ -10,6 +11,7 @@ function Routes(){
        <Route path="/" exact component={Home} />
        <Route path="/about" component={About} />
        <Route path="/search" component={Search} />
+       <Route path="/details/:details" component={Details} />
      </Switch>
     );
 

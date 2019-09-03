@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Search.css';
 import api from '../services/api';
+import { Link } from 'react-router-dom';
 
 // import { Container } from './styles';
 
@@ -9,6 +10,24 @@ export default class Search extends Component {
     pokemon: '',
     pokemons: [],
   };
+
+  componentDidMount(){
+    const pokemons = localStorage.getItem('pokemons');
+
+    if (pokemons){
+      this.setState({pokemons: JSON.parse(pokemons)});
+    }
+
+  }
+
+  componentDidUpdate(_, prevState){
+   const {pokemons} = this.state;
+
+    if (prevState.pokemons !== this.state.pokemons){
+      localStorage.setItem('pokemons', JSON.stringify(pokemons))
+    }
+
+  }
   
   handleInputChange = e => {
    this.setState({ pokemon: e.target.value });
@@ -24,6 +43,8 @@ export default class Search extends Component {
    const data = {
      name: response.data.name,
    };
+
+   console.log(data);
 
    this.setState({
     pokemons: [...pokemons, data],
@@ -53,7 +74,7 @@ export default class Search extends Component {
          {pokemons.map(pokemon =>(
          <li key={pokemon.name}>
           <span>{pokemon.name}</span>
-          <a href="#">Detalhes</a>
+          <Link to={`/details/${encodeURIComponent(pokemon.name)}`}>Detalhes</Link>
          </li>
          ))}
        </ul>
