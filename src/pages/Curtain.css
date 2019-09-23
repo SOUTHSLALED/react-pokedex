@@ -1,0 +1,121 @@
+div.curtain {
+  background: #eee;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  height: 500px;
+}
+
+div.curtain .curtain-left {
+  background-color: red;
+  position: relative;
+  width: 50%;
+  border-color: white;
+  border-radius: 10px;
+  animation-name: curtainright;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+}
+
+div.curtain .curtain-right {
+  background-color: red;
+  position: relative;
+  border-color: white;
+  border-radius: 10px;
+  width: 50%;
+  animation-name: curtainleft;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+}
+
+/* The animation code */
+@keyframes example {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+
+.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -60px 0 0 -60px;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes curtainleft {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 400px;
+  }
+}
+
+@-webkit-keyframes curtainleft {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 400px;
+  }
+}
+
+@keyframes curtainleft {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 400px;
+  }
+}
+
+@-moz-keyframes curtainright {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 400px;
+  }
+}
+
+@-webkit-keyframes curtainright {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 400px;
+  }
+}
+
+@keyframes curtainright {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 400px;
+  }
+}

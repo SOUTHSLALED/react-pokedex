@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // import { Container } from './styles';
 
 import pokedex from '../assets/pokedex.png'
+import pokeball from '../pages/pokeball.png'
 
 import './Header.css';
 
@@ -22,7 +23,11 @@ export default function Header() {
        <Link to ='/about' style={{textDecoration: 'none'}} > 
         <li className="active">About</li>
        </Link>
+       <Link to ='/curtain' style={{textDecoration: 'none'}} > 
+        <li className="active">Curtain</li>
+       </Link>
       </ul>
+      <img class="image" src={pokeball} alt="pokeball"></img>
       </div>
     </header>
   );
